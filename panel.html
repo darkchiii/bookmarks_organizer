@@ -2,10 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>TabMind</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark Organizer</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>TabMind</h1>
-    <p>Loading...</p>
+    <div class="container">
+        <header>
+            <h1>Bookmark Organizer</h1>
+            <p>bookmark organization</p>
+        </header>
+
+        <div class="content">
+            <div class="section-title">Your Bookmarks</div>
+
+            <div class="stats" id="stats">
+                <div class="stat-item">
+                    <span></span>
+                    <span>Folders: <span class="stat-number" id="folder-count">0</span></span>
+                </div>
+                <div class="stat-item">
+                    <span></span>
+                    <span>Bookmarks: <span class="stat-number" id="bookmark-count">0</span></span>
+                </div>
+                <div class="stat-item">
+                    <span></span>
+                    <span>Selected: <span class="stat-number" id="selected-count">0</span></span>
+                </div>
+            </div>
+
+            <div id="bookmarks-tree">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Loading your bookmarks...</p>
+                </div>
+            </div>
+
+            <button id="analyze-btn" class="primary-btn" disabled>
+                Analyze & Organize Bookmarks
+            </button>
+
+            <div id="results" style="display: none;"></div>
+        </div>
+    </div>
+
+    <script src="panel.js"></script>
 </body>
 </html>
