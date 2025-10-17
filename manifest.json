@@ -1,0 +1,22 @@
+{
+    "name": "Bookmarks Organizer",
+    "version": "1.0.0",
+    "description": "Chrome extension for organizing bookmarks",
+    "permissions": ["bookmarks", "storage"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "host_permissions": ["<all_urls>"],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "side_panel": {
+        "default_path": "panel.html"
+      },
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+      },
+    "manifest_version": 3
+}
